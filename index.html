@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Create a webpage with a 16x16 grid of square divs. -->
+
+    <!-- Container that will hold my divs -->
+     <div class="container"></div>
     
+
+
+    <script>
+        //Create the divs using JavaScript.
+
+        //start by referenceing container in html
+        const container = document.querySelector(".container");
+        //for loop we need 256 grids to 
+        for(let i = 1; i <= 256; i++){
+            let gridDiv = document.createElement("div");
+            gridDiv.style.border = "5px solid black";
+            gridDiv.style.margin = "5px";
+            gridDiv.style.padding = "10px"
+            container.append(gridDiv);
+        }
+
+    </script>
 </body>
 </html>
