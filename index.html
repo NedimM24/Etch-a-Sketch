@@ -28,6 +28,14 @@
         const clear = document.querySelector("#clear");
         const reSize = document.querySelector("#resize");
 
+        reSize.addEventListener("click", () =>{
+            console.log("Wagann");
+            let newGrid = prompt("Enter new size. Grid will be your number^2");
+            alert(newGrid);
+            
+            
+        })
+
         
 
 
@@ -46,6 +54,8 @@
              //clears grid once button is clicked   
             clear.addEventListener("click", () => {
                 gridDiv.style.backgroundColor = "white";
+
+                //Lets user enter value to resize
         })
             })
         }
