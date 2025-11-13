@@ -14,12 +14,20 @@
 }
 
 
-
 .border{
     background-color: red;
     padding: 30px;
     flex-grow: 0;
     border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    
+    
     
 }
 
@@ -30,6 +38,7 @@
     height: 500px;
     width: 500px;
     
+    
 }
 
 div {
@@ -38,3 +47,15 @@ div {
     height: 6.25%;
     
 }
+
+button {
+    
+    padding: 10px 5px;
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+    width: 100px;
+    
+}
+
+ 
