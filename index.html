@@ -13,55 +13,50 @@
     <!-- Container that will hold my divs -->
      
         <div class="border">
-            <button id="clear">clear</button>
-            <button id="resize">Re-size</button>
-            <div class="container"></div>
-            <div class="title">Etch-a-Sketch</div>
+        <button id="clear">Clear</button>
+        <div class="container"></div>
+        <div class="title">Etch-a-Sketch</div>
         </div>
     
+    
+
+
     <script>
         //Create the divs using JavaScript.
 
         //start by referenceing container in html
-        //reference buttons
         const container = document.querySelector(".container");
         const clear = document.querySelector("#clear");
         const reSize = document.querySelector("#resize");
 
-        reSize.addEventListener("click", () =>{
-            console.log("Wagann");
-            let newGrid = prompt("Enter new size. Grid will be your number^2");
-            alert(newGrid);
-            
-            
-        })
-
         
+       function grid(gridSize){
 
-
+        container.innerHTML = "";
         //for loop we need 256 grids to 
-        for(let i = 1; i <= 256; i++){
+        for(let i = 1; i <= gridSize * gridSize; i++){
             let gridDiv = document.createElement("div");
-            gridDiv.style.border = ".0px solid black";
+            gridDiv.style.border = "0px solid black";
             gridDiv.style.padding = "10px";
             gridDiv.style.backgroundColor = "white" //If mouse hovers over div, change backround color to black
             container.append(gridDiv);
 
-            //turns div black once hovered over 
+
             gridDiv.addEventListener("mouseover", () => {
                 gridDiv.style.backgroundColor = "black";
-
-             //clears grid once button is clicked   
-            clear.addEventListener("click", () => {
-                gridDiv.style.backgroundColor = "white";
-
-                //Lets user enter value to resize
-        })
             })
+
+            clear.addEventListener("click", () => { 
+                gridDiv.style.backgroundColor = "white";})
+
         }
+       }
+
+       grid(16);
 
         
-        
+            
+
 
     </script>
 </body>
